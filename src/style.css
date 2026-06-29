@@ -1,0 +1,358 @@
+/* Global custom styles for Insight Hire application */
+
+:root {
+  --primary: #1a1a1a;
+  --primary-yellow: #ffc107;
+  --primary-gradient: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  --bg-body: #f0f2f5;
+  --bg-card: #ffffff;
+  --text-muted: #6c757d;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Body */
+body {
+  background-color: var(--bg-body);
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #212529;
+  line-height: 1.6;
+}
+
+/* Container max-width */
+.container {
+  max-width: 1200px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: #1a1d20;
+  margin-bottom: 0.75rem;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--bg-card);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  font-weight: 600;
+  border-radius: 0.75rem 0.75rem 0 0 !important;
+}
+
+/* Force all Bootstrap primary/blue elements to use black/yellow theme */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background: var(--primary-gradient) !important;
+  border-color: var(--primary) !important;
+  color: var(--primary-yellow) !important;
+  box-shadow: none !important;
+}
+
+.btn-outline-primary {
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+  background: transparent !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--primary-yellow) !important;
+}
+
+.text-primary,
+a.text-primary {
+  color: var(--primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.border-primary {
+  border-color: var(--primary) !important;
+}
+
+/* Override Bootstrap link colors */
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--primary-yellow);
+}
+
+/* Override form focus borders */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 0.2rem rgba(26, 26, 26, 0.15) !important;
+}
+
+/* Override list group active */
+.list-group-item.active {
+  background: var(--primary-gradient) !important;
+  border-color: var(--primary) !important;
+  color: var(--primary-yellow) !important;
+}
+
+/* Override navbar active link */
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--primary-yellow) !important;
+}
+
+/* Progress bars */
+.progress-bar {
+  background: var(--primary-gradient) !important;
+}
+
+/* Pagination */
+.page-item.active .page-link {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.page-link {
+  color: var(--primary) !important;
+}
+
+.page-link:hover {
+  color: var(--primary-yellow) !important;
+  background-color: rgba(26, 26, 26, 0.05) !important;
+  border-color: var(--primary) !important;
+}
+
+/* Dropdown */
+.dropdown-item:active,
+.dropdown-item.active {
+  background-color: var(--primary) !important;
+  color: var(--primary-yellow) !important;
+}
+
+/* Tooltip */
+.tooltip-inner {
+  background-color: var(--primary) !important;
+}
+
+/* Popover */
+.popover-header {
+  background-color: var(--primary) !important;
+  color: var(--primary-yellow) !important;
+}
+
+/* Accordion */
+.accordion-button:not(.collapsed) {
+  color: var(--primary) !important;
+  background-color: rgba(26, 26, 26, 0.03) !important;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(26, 26, 26, 0.15) !important;
+}
+
+/* Carousel */
+.carousel-indicators .active {
+  background-color: var(--primary) !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: var(--primary) !important;
+  opacity: 0.7;
+}
+
+/* Close button */
+.btn-close {
+  filter: invert(0.5);
+}
+
+/* Badge primary override */
+.badge.bg-primary,
+.badge.text-bg-primary {
+  background: var(--primary-gradient) !important;
+  color: var(--primary-yellow) !important;
+}
+
+/* Table */
+.table-primary {
+  --bs-table-bg: var(--primary) !important;
+  --bs-table-color: var(--primary-yellow) !important;
+}
+
+thead th {
+  border-bottom: 2px solid var(--primary) !important;
+}
+
+/* Input group text */
+.input-group-text {
+  background-color: #f8f9fa !important;
+  border-color: #ced4da !important;
+  color: var(--primary) !important;
+}
+
+/* Checkbox/radio custom */
+.form-check-input:checked {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(26, 26, 26, 0.15) !important;
+}
+
+/* Range input */
+.form-range::-webkit-slider-thumb {
+  background: var(--primary) !important;
+}
+
+.form-range::-moz-range-thumb {
+  background: var(--primary) !important;
+}
+
+/* Select */
+select:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 0.2rem rgba(26, 26, 26, 0.15) !important;
+}
+
+/* File input */
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #f8f9fa !important;
+  border-color: #ced4da !important;
+}
+
+/* Placeholder */
+::placeholder {
+  color: #6c757d !important;
+  opacity: 1;
+}
+
+/* Forms */
+.form-control, .form-select {
+  border-radius: 0.5rem;
+  border: 1px solid #ced4da;
+  padding: 0.625rem 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(26, 26, 26, 0.15);
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  color: #495057;
+}
+
+fieldset {
+  border: 1px solid #e9ecef;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: #fafbfc;
+}
+
+legend {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #495057;
+  padding: 0 0.5rem;
+}
+
+/* Invalid feedback */
+.invalid-feedback {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linecap='round' d='M6 3.5v3M6 8.5h.01'/%3e%3c/svg%3e") !important;
+}
+
+/* Badges */
+.badge {
+  font-weight: 500;
+  border-radius: 0.375rem;
+  padding: 0.35em 0.65em;
+}
+
+/* List group */
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #e9ecef;
+  transition: all 0.15s ease;
+}
+
+.list-group-item:hover {
+  background-color: #f1f3f5;
+}
+
+.list-group-item.active {
+  background: var(--primary-gradient);
+  border-color: var(--primary);
+  font-weight: 500;
+  color: var(--primary-yellow);
+}
+
+/* Alerts */
+.alert {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* To-Do specific */
+.list-group-item-action {
+  cursor: pointer;
+}
+
+/* Section dividers */
+.section-divider {
+  height: 4px;
+  background: var(--primary-gradient);
+  opacity: 0.6;
+}
+
+/* Smooth scroll with offset for sticky navbar */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Ensure sticky navbar doesn't overlap section content on scroll */
+.section-block {
+  scroll-margin-top: 100px;
+}
+
+/* Utility */
+.shadow-sm {
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg) !important;
+}
