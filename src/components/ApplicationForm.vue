@@ -22,6 +22,11 @@ const submitted = ref(false);
 const formEl = ref(null);
 const touched = reactive({});
 
+const lettersOnly = /^[A-Za-z]+$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const fourDigits = /^\d{4}$/;
+const startsWith04 = /^04\d{8}$/;
+
 function touchField(field) {
   touched[field] = true;
   validateField(field);
@@ -220,6 +225,10 @@ function onSubmit(event) {
       }
     });
   }
+}
+
+function toggleTerms() {
+  form.termsVisible = !form.termsVisible;
 }
 
 </script>
